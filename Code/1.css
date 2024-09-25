@@ -1,0 +1,367 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header{
+    width: 100%;
+    height: 92%;
+    border: 1px solid #b01a1a;
+    
+
+}
+
+
+
+.master_play{
+    display: flex;
+    align-items: center;
+    #border: 1px solid #ffffff;
+    width: 100%;
+    height: 50px;
+    background: #822323;
+    
+    
+
+}
+
+.wave{
+    #border:1px solid #dc2d2d;
+    height: 35px;
+    width: 35px;
+    margin-left: 30px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    
+    margin-right: 10px;
+
+    
+}
+.wave .wave1{
+    width: 5px;
+    height: 13px;
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #dc2d2d;
+    animation: unset;
+}
+
+.wave .wave1:nth-child(2){
+   
+    height: 15px;
+    /*animation-delay: .4s;*/
+
+}
+
+.wave .wave1:nth-child(3){
+   
+    height: 10px;
+    /*animation-delay: .8s;*/
+
+}
+
+@keyframes wave{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+
+    }
+    100%{
+        height: 9px;
+
+    }
+}
+
+
+.wavea{
+    #border:1px solid #dc2d2d;
+    height: 35px;
+    width: 35px;
+    margin-left: 30px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    
+    margin-left: 100px;
+
+    
+}
+.wavea .wavea1{
+    width: 5px;
+    height: 13px;
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #dc2d2d;
+    animation: unset;
+}
+
+.wavea .wavea1:nth-child(2){
+   
+    height: 15px;
+    /*animation-delay: .4s;*/
+
+}
+
+.wavea .wavea1:nth-child(3){
+   
+    height: 10px;
+    /*animation-delay: .8s;*/
+
+}
+
+@keyframes wavea{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+
+    }
+    100%{
+        height: 9px;
+
+    }
+}
+
+
+
+/*javascript class wave*/
+.active2 .wave1{
+
+    animation: wave .5s linear infinite;
+}
+.active2 .wave1:nth-child(2){
+   
+    
+    animation-delay: .4s;
+
+}
+
+.active2 .wave1:nth-child(3){
+   
+    
+    animation-delay: .8s;
+
+}
+@keyframes wave{
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+
+    }
+    100%{
+        height: 9px;
+
+    }
+}
+.img_song{
+    width: 30px;
+    height: 30px;
+}
+.master_play h5{
+    width:130px ;
+    font-size: 13px;
+    margin-left: 15px;
+    color: #ffff;
+    line-height: 15px;
+
+}
+.master_play h5 .subtile{/*chữ ở dưới */
+    font-size: 11px;
+    color: #4c5262;
+}
+.master_play .icon  {
+    font-size: 70px;
+    color: #000000;
+    margin: 10px 20px 30px 40px;
+    
+
+}
+.master_play .icon .bi {
+    cursor: pointer;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    
+
+
+}
+
+
+.master_play span{
+    color: #ffffff;
+    width: 32px;
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.master_play #currentStart{
+    margin: 0px 0px 0px 20px;
+
+
+}
+.master_play .bar{
+    position: relative;
+    width: 35%;
+    height: 2px;
+    background:#dc2d2d ;
+    margin: 0px 15px 0px 10px ;
+}
+.master_play .bar .bar2{
+    position: absolute;
+    background: #34a484;
+    width: 20px;
+    height: 100%;
+    top :0;
+
+    
+}
+.master_play .bar .dot{/*hinh tron*/
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #34a484; 
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+}
+.master_play .bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #34a484;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px #34a484;
+
+}
+.master_play .bar input{
+    
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 0;
+    z-index: 999999999;
+    transition:3s linear ;
+    opacity: 0;
+    
+
+}
+
+.master_play .vol{
+    position: relative;
+    width: 100px;
+    height: 2px;
+    margin-left: 50px;
+    background: rgb(105,105,170);
+
+}
+.master_play .vol .bi{
+    position: absolute;
+    color: #489515;
+    font-size: 25px;
+    top:-17px;
+    left: -30px;
+    cursor: pointer;
+    outline: none;
+    width: 25px;
+    height: 25px;
+    margin-top: 6px;
+
+
+
+}
+.master_play .vol input{
+    
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    z-index: 999999999;
+    transition:3s linear ;
+    opacity: 0;
+    
+
+}
+
+.master_play .vol .vol_bar{
+    position: absolute;
+    background: #34a484;
+    width: 20px;
+    height: 100%;
+    top :0;
+
+    
+}
+.master_play .vol .dot{/*hinh tron*/
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #34a484; 
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+}
+.master_play .vol .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    #border: 1px solid #34a484;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px #34a484;
+
+}
+.playableTile__description{
+    font-size: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 100px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.playableTile__heading{
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    
+}
+.playableTile__usernameHeadingContainer {
+    display: flex;
+}
+.sc-type-light {
+    font-weight: 100;
+    color: #999;
+}
+.sc-font, .sc-font-light {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+}
+a, a:visited {
+    color: #38d;
+    text-decoration: none;
+}
